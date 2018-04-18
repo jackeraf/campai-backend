@@ -33,7 +33,7 @@ Create the front-end repo however you prefer, as stated on the guidelines above.
 
 For this challenge, you will build a navbar with a search input.
 
-This is the base layout, you can click on it for more details
+This is the base layout, you can `click on it` for more details
 
 [<img src="https://i.imgur.com/BN0TU6g.png">](https://www.figma.com/file/XNRScAt4be6hP2NvrU3RrNXO/Untitled)
 
