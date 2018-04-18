@@ -8,7 +8,7 @@ Please read the following notes carefully, since they are of utmost importance f
 
 *   Show us what you know! Think outside of the box. Think about structure, reusability and scalability
 *   You should create your own repository for the front-end. You can set it up however you prefer, but you have to use `React`, a store (Mobx or Redux are both fine) and a comprehensive README to help anyone setup and run your code.
-*   Testing  for the backend is not necessary. Bonus points if you do. Even more so if you add it to travis.
+*   Testing for the backend is not necessary. Bonus points if you do. Even more so if you add it to travis.
 *   Testing the front-end is not necessary.
 *   Once again, think about scalability. If I would have to add 20 more endpoints for your server tomorrow, how easy would that be?
 
@@ -35,7 +35,7 @@ For this challenge, you will build a navbar with a search input.
 
 This is the base layout, you can click on it for more details
 
-[<img src="https://i.imgur.com/rheKEdI.png">](https://www.figma.com/file/XNRScAt4be6hP2NvrU3RrNXO/Untitled)
+[<img src="https://i.imgur.com/BN0TU6g.png">](https://www.figma.com/file/XNRScAt4be6hP2NvrU3RrNXO/Untitled)
 
 ## Usage
 
