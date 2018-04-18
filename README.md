@@ -16,14 +16,42 @@ Happy coding! :coffee:
 
 # Before you start
 
-Fork this repo to your private profile. Then you can submit a PR and let us know when you finish!
-
-Also, for the dev environment we suggest:
+For the dev environment we suggest:
 
 *   Node 8.9.4+
 *   Mongo 3.4+
 *   Any code editor of your choice (Although VScode is always the right choice)
 *   Npm or Yarn as package managers. Npm 5+ is fast, so we reccomend that.
+
+# Test challenge itself:
+
+Fork this repo to your private profile, that will be where you should commit all your backend code.
+
+Create the front-end repo however you prefer, as stated on the guidelines above.
+
+## Layout
+
+For this challenge, you will build a navbar with a search input.
+
+This is the base layout, you can click on it for more details
+
+[<img src="https://i.imgur.com/rheKEdI.png">](https://www.figma.com/file/XNRScAt4be6hP2NvrU3RrNXO/Untitled)
+
+## Usage
+
+While the user is typing, the search dropdown should be updated accordingly. The search should be performed on three different collections: `orgs`, `contacts`, and `contactgroups`.
+
+The search result inside the dropdwon should have three different sections, one for each collection. If no result is found for a certain collection, the section should not be displayed.
+
+All searches should be canse insensitive.
+
+## Features
+
+*   When searching the Org collection, you can search for name, type and city. Should only display the name, city and type. You can add a dummy logo that has the initial letter of the org name like [this](<[Imgur](https://i.imgur.com/eTOdqUS.png)>)
+
+*   When searching for contacts, you can search for the first_name, last_name and org name. Should display the full name of the user, city and the org name below the user name. For rendering the user avatar, you need to use this [library](https://github.com/fangpenlin/avataaars)
+
+*   When searching for groups, you should search for name only. You need to display the name and city only. You can add a dummy logo that has the initial letter of the org name.
 
 ## How to start:
 
