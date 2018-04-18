@@ -23,7 +23,7 @@ For the dev environment we suggest:
 *   Any code editor of your choice (Although VScode is always the right choice)
 *   Npm or Yarn as package managers. Npm 5+ is fast, so we reccomend that.
 
-# Test challenge itself:
+# The challenge itself:
 
 Fork this repo to your private profile, that will be where you should commit all your backend code.
 
