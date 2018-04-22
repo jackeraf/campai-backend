@@ -9,21 +9,28 @@ const findContacts = require("./findContacts")
 const findContactGroups = require("./findContactGroups")
 
 const mongoCollectionsService = (req, res)=>{
-    const orgsSearchTerm = {$or:[ {"name": req.body.orgs},{"city": req.body.orgs}, {"type": req.body.orgs}]};
-    const contactsSearchTerm = {$or:[ {"first_name": req.body.contacts},{"last_name": req.body.contacts}]};
-    const groupsSearchTerm = {"name": req.body.groups};
+    const orgSearchTerm = req.body.orgs;
+    const orgRegex = new RegExp(".*" + orgSearchTerm + ".*", "i");
+    const contactsSearchTerm = req.body.contacts;
+    const contactsRegex = new RegExp(".*" + contactsSearchTerm + ".*", "i");
+    const groupsSearchTerm = req.body.groups;
+    const groupsRegex = new RegExp(".*" + groupsSearchTerm + ".*", "i");
+    
+    const orgsMongoQuery = {$or:[ {"name": orgRegex},{"city": orgRegex}, {"type": orgRegex}]};
+    const contactsMongoQuery = {$or:[ {"first_name": contactsRegex},{"last_name": contactsRegex}]};
+    const groupsMongoQuery = {"name": groupsRegex};
 
     MongoClient.connect(url, function(err, db) {
     const searchTermTotalResponse = {};
     const queries = [
         function(callback) {
-          return findOrgs(orgsSearchTerm,searchTermTotalResponse, db, callback)     
+          return findOrgs(orgsMongoQuery,searchTermTotalResponse, db, callback)     
         },
         function(callback) {
-          return findContacts(contactsSearchTerm,searchTermTotalResponse, db, callback )
+          return findContacts(contactsMongoQuery,searchTermTotalResponse, db, callback )
         },
         function(callback) {
-           return findContactGroups(groupsSearchTerm,searchTermTotalResponse, db, callback )
+           return findContactGroups(groupsMongoQuery,searchTermTotalResponse, db, callback )
         }
     ];
 
